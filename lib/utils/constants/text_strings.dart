@@ -17,7 +17,7 @@ class MyAppTexts {
 
   // Home
   static const String homeAppbarTitle = "Good day for shopping";
-  static const String homeAppbarSubTitle = "Krishnabh Das";
+  static const String homeAppbarSubTitle = "Gladiator";
 
   // Authentication Form Texts
   static const String firstName = "First Name";

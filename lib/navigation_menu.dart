@@ -1,5 +1,3 @@
-import 'package:ecommerce/features/authentication/screens/demo.dart';
-import 'package:ecommerce/features/authentication/screens/login/login.dart';
 import 'package:ecommerce/features/shop/screens/home/home.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
