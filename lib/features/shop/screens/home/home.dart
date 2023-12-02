@@ -27,7 +27,7 @@ class homeScreen extends StatelessWidget {
 
                   // Search Bar
                   searchContainer(
-                    text: "Serach in Store",
+                    text: "Search in Store",
                   ),
 
                   SizedBox(

@@ -51,7 +51,7 @@ class searchContainer extends StatelessWidget {
               ),
               Text(
                 text,
-                style: Theme.of(context).textTheme.bodyLarge!.apply(
+                style: Theme.of(context).textTheme.bodyMedium!.apply(
                     color: dark ? MyAppColors.grey : MyAppColors.darkGrey),
               )
             ],
