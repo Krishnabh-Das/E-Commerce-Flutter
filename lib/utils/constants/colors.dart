@@ -52,4 +52,6 @@ class MyAppColors {
   static const Color darkerGrey = Color(0XFF4F4F4F);
   static const Color darkGrey = Color(0XFF939393);
   static const Color grey = Color(0XFFE0E0E0);
+
+  static const Color transperant = Colors.transparent;
 }

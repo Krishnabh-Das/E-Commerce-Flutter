@@ -1,5 +1,8 @@
 import 'package:ecommerce/common/widgets/custom_shapes/containers/primary_header_container.dart';
+import 'package:ecommerce/common/widgets/custom_shapes/containers/serach_container.dart';
 import 'package:ecommerce/features/shop/screens/home/widgets/home_appbar.dart';
+import 'package:ecommerce/features/shop/screens/home/widgets/home_categories.dart';
+import 'package:ecommerce/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 
 class homeScreen extends StatelessWidget {
@@ -16,10 +19,23 @@ class homeScreen extends StatelessWidget {
               child: Column(
                 children: [
                   // App Bar
-                  homeAppBar()
+                  homeAppBar(),
+
+                  SizedBox(
+                    height: MyAppSizes.spaceBtwSections,
+                  ),
 
                   // Search Bar
+                  searchContainer(
+                    text: "Serach in Store",
+                  ),
+
+                  SizedBox(
+                    height: MyAppSizes.spaceBtwSections,
+                  ),
+
                   // Categories
+                  homeCategories()
                 ],
               ),
             )

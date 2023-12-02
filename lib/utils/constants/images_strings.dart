@@ -21,4 +21,7 @@ class MyAppImages {
   // Animations
   static const String success = "assets/images/animations/success.gif";
   static const String verifying = "assets/images/animations/verifying.gif";
+
+  // Categories
+  static const String shoes = "assets/images/categories/shoes.png";
 }
