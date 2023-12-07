@@ -36,6 +36,9 @@ dependencies:
   # Navigation Bar
   curved_navigation_bar: ^1.0.3
 
+  # Home Banner
+  carousel_slider: ^4.2.1
+
 
 dev_dependencies:
   flutter_test:
@@ -51,6 +54,7 @@ flutter:
     - assets/images/onBoardingImages/
     - assets/images/animations/
     - assets/images/categories/
+    - assets/images/homeBanner/
     - assets/logos/
     - assets/icons/
 

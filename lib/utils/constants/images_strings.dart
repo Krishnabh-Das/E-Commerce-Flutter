@@ -24,4 +24,9 @@ class MyAppImages {
 
   // Categories
   static const String shoes = "assets/images/categories/shoes.png";
+
+  // Home Banner
+  static const String banner1 = "assets/images/homeBanner/banner1.png";
+  static const String banner2 = "assets/images/homeBanner/banner2.png";
+  static const String banner3 = "assets/images/homeBanner/banner3.png";
 }
