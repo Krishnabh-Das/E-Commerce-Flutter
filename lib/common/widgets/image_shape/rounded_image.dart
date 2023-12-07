@@ -16,25 +16,27 @@ class roundedImage extends StatelessWidget {
     this.isNetworkImage = false,
     this.onPressed,
     this.borderRadius = MyAppSizes.md,
+    this.margin,
   });
 
   final double? width, height;
   final String imageUrl;
   final bool applyImageRadius;
   final BoxBorder? border;
-  final Color backgroundColor;
+  final Color? backgroundColor;
   final BoxFit? fit;
   final EdgeInsetsGeometry? padding;
   final bool isNetworkImage;
   final VoidCallback? onPressed;
   final double borderRadius;
+  final EdgeInsetsGeometry? margin;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onPressed,
       child: Container(
-        margin: EdgeInsets.only(right: MyAppSizes.sm, left: MyAppSizes.sm),
+        margin: margin,
         width: width,
         height: height,
         padding: padding,

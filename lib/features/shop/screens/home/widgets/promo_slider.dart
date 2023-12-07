@@ -26,7 +26,13 @@ class promoSlider extends StatelessWidget {
             enlargeStrategy: CenterPageEnlargeStrategy.height,
             onPageChanged: (index, _) => controller.updatePageIndicator(index),
           ),
-          items: banners.map((url) => roundedImage(imageUrl: url)).toList(),
+          items: banners
+              .map((url) => roundedImage(
+                    imageUrl: url,
+                    margin: EdgeInsets.only(
+                        right: MyAppSizes.xs, left: MyAppSizes.xs),
+                  ))
+              .toList(),
         ),
         const SizedBox(
           height: MyAppSizes.spaceBtwItems,

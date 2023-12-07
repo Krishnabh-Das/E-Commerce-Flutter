@@ -54,4 +54,5 @@ class MyAppColors {
   static const Color grey = Color(0XFFE0E0E0);
 
   static const Color transperant = Colors.transparent;
+  static const Color red = Colors.red;
 }

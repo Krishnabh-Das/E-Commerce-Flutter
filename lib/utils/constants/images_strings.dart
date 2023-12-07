@@ -29,4 +29,10 @@ class MyAppImages {
   static const String banner1 = "assets/images/homeBanner/banner1.png";
   static const String banner2 = "assets/images/homeBanner/banner2.png";
   static const String banner3 = "assets/images/homeBanner/banner3.png";
+
+  // Products
+  static const String product2 = "assets/images/products/product2.png";
+  static const String product1 = "assets/images/products/product1.png";
+  static const String product3 = "assets/images/products/product3.png";
+  static const String product4 = "assets/images/products/product4.png";
 }

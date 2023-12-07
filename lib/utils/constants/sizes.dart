@@ -65,7 +65,7 @@ class MyAppSizes {
   static const double loadingIndicatorSize = 36.0;
 
   // Grid view
-  static const double gridViewSpacing = 16.0;
+  static const double gridViewSpacing = 12.0;
 
   // Text Form Field
   static const double textFormFieldHeight = 60.0;
