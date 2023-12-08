@@ -21,7 +21,7 @@ class promoSlider extends StatelessWidget {
           options: CarouselOptions(
             viewportFraction: 1,
             autoPlay: true,
-            autoPlayAnimationDuration: Duration(seconds: 1),
+            autoPlayAnimationDuration: const Duration(seconds: 1),
             enlargeCenterPage: true,
             enlargeStrategy: CenterPageEnlargeStrategy.height,
             onPageChanged: (index, _) => controller.updatePageIndicator(index),
@@ -29,7 +29,7 @@ class promoSlider extends StatelessWidget {
           items: banners
               .map((url) => roundedImage(
                     imageUrl: url,
-                    margin: EdgeInsets.only(
+                    margin: const EdgeInsets.only(
                         right: MyAppSizes.xs, left: MyAppSizes.xs),
                   ))
               .toList(),
@@ -48,7 +48,7 @@ class promoSlider extends StatelessWidget {
                   backgroundColor: controller.carousalCurrentIndex == i
                       ? MyAppColors.primary
                       : MyAppColors.grey,
-                  margin: EdgeInsets.only(right: 5),
+                  margin: const EdgeInsets.only(right: 5),
                 ),
             ],
           ),

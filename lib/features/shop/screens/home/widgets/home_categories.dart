@@ -19,14 +19,18 @@ class homeCategories extends StatelessWidget {
       padding: const EdgeInsets.only(left: MyAppSizes.defaultSpace),
       child: Column(
         children: [
+          /// Popular Categories
           const sectionHeading(
             title: "Popular Categories",
             showActionButton: false,
             textColor: MyAppColors.textWhite,
           ),
+
           const SizedBox(
             height: MyAppSizes.spaceBtwItems,
           ),
+
+          /// List of Categories
           SizedBox(
             height: 84,
             child: ListView.builder(

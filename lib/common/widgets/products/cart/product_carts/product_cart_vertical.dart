@@ -2,6 +2,7 @@ import 'package:ecommerce/common/styles/shadow_style.dart';
 import 'package:ecommerce/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:ecommerce/common/widgets/icons/circular_icon.dart';
 import 'package:ecommerce/common/widgets/image_shape/rounded_image.dart';
+import 'package:ecommerce/common/widgets/texts/brand_title_with_verfiedIcon.dart';
 import 'package:ecommerce/common/widgets/texts/product_price_text.dart';
 import 'package:ecommerce/common/widgets/texts/product_title_text.dart';
 import 'package:ecommerce/utils/constants/colors.dart';
@@ -21,7 +22,6 @@ class productCartVertical extends StatelessWidget {
     return GestureDetector(
       onTap: () {},
       child: Container(
-        width: 180,
         padding: EdgeInsets.all(2),
         decoration: BoxDecoration(
             boxShadow: [shadowStyle.verticalProductShadow],
@@ -32,7 +32,7 @@ class productCartVertical extends StatelessWidget {
           children: [
             /// --Image
             roundedContainer(
-              height: 190,
+              height: 210,
               padding: EdgeInsets.all(MyAppSizes.sm),
               backgroundColor: dark ? MyAppColors.dark : MyAppColors.light,
               child: Stack(
@@ -91,54 +91,41 @@ class productCartVertical extends StatelessWidget {
                   SizedBox(
                     height: MyAppSizes.spaceBtwItems / 2,
                   ),
-                  Row(
-                    children: [
-                      Text(
-                        "Nike",
-                        style: Theme.of(context).textTheme.labelMedium,
-                        overflow: TextOverflow.ellipsis,
-                        maxLines: 1,
-                        textAlign: TextAlign.left,
-                      ),
-                      const SizedBox(
-                        width: MyAppSizes.xs,
-                      ),
-                      const Icon(
-                        Iconsax.verify5,
-                        color: MyAppColors.primary,
-                        size: MyAppSizes.iconXs,
-                      )
-                    ],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      // Price
-                      productPriceText(priceText: "35.55"),
-
-                      Container(
-                        decoration: const BoxDecoration(
-                            color: MyAppColors.dark,
-                            borderRadius: BorderRadius.only(
-                                topLeft:
-                                    Radius.circular(MyAppSizes.cardRadiusMd),
-                                bottomRight: Radius.circular(
-                                    MyAppSizes.productImageRadius))),
-                        child: const SizedBox(
-                          height: MyAppSizes.iconLg * 1.2,
-                          width: MyAppSizes.iconLg * 1.2,
-                          child: Center(
-                            child: Icon(
-                              Iconsax.add,
-                              color: MyAppColors.textWhite,
-                            ),
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
+                  brandTitleWithVerification(title: "Nike"),
                 ],
               ),
+            ),
+            const Spacer(),
+
+            // Price & Add button
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                // Price
+                const Padding(
+                  padding: const EdgeInsets.only(left: MyAppSizes.sm - 1),
+                  child: productPriceText(priceText: "35.55"),
+                ),
+
+                Container(
+                  decoration: const BoxDecoration(
+                      color: MyAppColors.dark,
+                      borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(MyAppSizes.cardRadiusMd),
+                          bottomRight:
+                              Radius.circular(MyAppSizes.productImageRadius))),
+                  child: const SizedBox(
+                    height: MyAppSizes.iconLg * 1.2,
+                    width: MyAppSizes.iconLg * 1.2,
+                    child: Center(
+                      child: Icon(
+                        Iconsax.add,
+                        color: MyAppColors.textWhite,
+                      ),
+                    ),
+                  ),
+                )
+              ],
             ),
           ],
         ),

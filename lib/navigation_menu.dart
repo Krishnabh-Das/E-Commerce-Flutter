@@ -1,4 +1,5 @@
 import 'package:ecommerce/features/shop/screens/home/home.dart';
+import 'package:ecommerce/features/shop/screens/store/store.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
@@ -36,7 +37,7 @@ class navigationController extends GetxController {
 
   final screens = [
     const homeScreen(),
-    Container(color: Colors.red),
+    const Store(),
     Container(color: Colors.yellow),
     Container(color: Colors.green),
   ];

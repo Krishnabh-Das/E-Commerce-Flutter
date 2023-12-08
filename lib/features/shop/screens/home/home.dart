@@ -2,6 +2,7 @@ import 'package:ecommerce/common/widgets/custom_shapes/containers/primary_header
 import 'package:ecommerce/common/widgets/custom_shapes/containers/search_container.dart';
 import 'package:ecommerce/common/widgets/layouts/grid_layout.dart';
 import 'package:ecommerce/common/widgets/products/cart/product_carts/product_cart_vertical.dart';
+import 'package:ecommerce/common/widgets/texts/section_heading.dart';
 import 'package:ecommerce/features/shop/controllers/carousal_controller.dart';
 import 'package:ecommerce/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:ecommerce/features/shop/screens/home/widgets/home_categories.dart';
@@ -53,13 +54,27 @@ class homeScreen extends StatelessWidget {
               padding: const EdgeInsets.all(MyAppSizes.spaceBtwItems),
               child: Column(
                 children: [
+                  // Banner
                   promoSlider(controller: controller, banners: const [
                     MyAppImages.banner1,
                     MyAppImages.banner2,
                     MyAppImages.banner3
                   ]),
+                  const SizedBox(
+                    height: MyAppSizes.spaceBtwSections,
+                  ),
+
+                  sectionHeading(
+                    title: "Popular Products",
+                    onPressed: () {},
+                  ),
+                  const SizedBox(
+                    height: MyAppSizes.spaceBtwSections / 2,
+                  ),
+
+                  // Grid Layout
                   gridLayout(
-                    itemBuilder: (_, index) => productCartVertical(),
+                    itemBuilder: (_, index) => const productCartVertical(),
                     itemCount: 4,
                   ),
                 ],
