@@ -1,13 +1,16 @@
 import 'package:ecommerce/common/widgets/appbar/appbar.dart';
+import 'package:ecommerce/common/widgets/appbar/tabbar.dart';
+import 'package:ecommerce/common/widgets/brands/brand_show_case.dart';
 import 'package:ecommerce/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:ecommerce/common/widgets/custom_shapes/containers/search_container.dart';
 import 'package:ecommerce/common/widgets/image_shape/circular_image.dart';
 import 'package:ecommerce/common/widgets/layouts/grid_layout.dart';
 import 'package:ecommerce/common/widgets/products/cart/cart_menu_icon.dart';
+import 'package:ecommerce/common/widgets/brands/brand_card.dart';
 import 'package:ecommerce/common/widgets/texts/brand_title_with_verfiedIcon.dart';
 import 'package:ecommerce/common/widgets/texts/section_heading.dart';
+import 'package:ecommerce/features/shop/screens/store/widgets/category_tab.dart';
 import 'package:ecommerce/utils/constants/colors.dart';
-import 'package:ecommerce/utils/constants/enums.dart';
 import 'package:ecommerce/utils/constants/images_strings.dart';
 import 'package:ecommerce/utils/constants/sizes.dart';
 import 'package:ecommerce/utils/helpers/helper_function.dart';
@@ -20,114 +23,99 @@ class Store extends StatelessWidget {
   Widget build(BuildContext context) {
     final dark = MyAppHelperFunctions.isDarkMode(context);
 
-    return Scaffold(
-      appBar: appBar(
-          title: Text(
-            "Store",
-            style: Theme.of(context).textTheme.headlineMedium,
-          ),
-          actions: [
-            cartCounterIcon(
-                iconColor: dark ? MyAppColors.light : MyAppColors.dark,
-                onPressed: () {})
-          ]),
-      body: NestedScrollView(
-          headerSliverBuilder: (_, innerBoxIsScrolled) {
-            return [
-              SliverAppBar(
-                automaticallyImplyLeading: true,
-                pinned: true,
-                floating: true,
-                backgroundColor:
-                    dark ? MyAppColors.black : MyAppColors.textWhite,
-                expandedHeight: 440,
-                flexibleSpace: Padding(
-                  padding: EdgeInsets.all(MyAppSizes.defaultSpace),
-                  child: ListView(
-                    shrinkWrap: true,
-                    physics: NeverScrollableScrollPhysics(),
-                    children: [
-                      /// Search Bar
-                      SizedBox(
-                        height: MyAppSizes.spaceBtwItems,
-                      ),
-                      searchContainer(
-                        text: "Search in Store",
-                        showBackground: false,
-                        onTap: () {},
-                        padding: EdgeInsets.zero,
-                      ),
-                      SizedBox(
-                        height: MyAppSizes.spaceBtwSections,
-                      ),
+    return DefaultTabController(
+      length: 5,
+      child: Scaffold(
+        backgroundColor: dark ? MyAppColors.black : MyAppColors.textWhite,
+        appBar: appBar(
+            title: Text(
+              "Store",
+              style: Theme.of(context).textTheme.headlineMedium,
+            ),
+            actions: [
+              cartCounterIcon(
+                  iconColor: dark ? MyAppColors.light : MyAppColors.dark,
+                  onPressed: () {})
+            ]),
+        body: NestedScrollView(
+            headerSliverBuilder: (_, innerBoxIsScrolled) {
+              return [
+                SliverAppBar(
+                    automaticallyImplyLeading: true,
+                    pinned: true,
+                    floating: true,
+                    backgroundColor:
+                        dark ? MyAppColors.black : MyAppColors.textWhite,
+                    expandedHeight: 410,
+                    flexibleSpace: Padding(
+                      padding: EdgeInsets.fromLTRB(
+                          MyAppSizes.defaultSpace / 1.5,
+                          5,
+                          MyAppSizes.defaultSpace / 1.5,
+                          MyAppSizes.defaultSpace / 1.5),
+                      child: ListView(
+                        shrinkWrap: true,
+                        physics: NeverScrollableScrollPhysics(),
+                        children: [
+                          SizedBox(
+                            height: MyAppSizes.spaceBtwItems,
+                          ),
 
-                      /// Feature Brands
-                      sectionHeading(
-                        title: "Feature Brands",
-                        onPressed: () {},
-                      ),
-                      const SizedBox(
-                        height: MyAppSizes.spaceBtwItems / 1.5,
-                      ),
+                          /// Search Bar
+                          searchContainer(
+                            text: "Search in Store",
+                            showBackground: false,
+                            onTap: () {},
+                            padding: EdgeInsets.zero,
+                          ),
 
-                      gridLayout(
-                          itemCount: 4,
-                          extendMainAxis: 80,
-                          itemBuilder: (_, index) {
-                            return GestureDetector(
-                              onTap: () {},
-                              child: roundedContainer(
-                                padding: EdgeInsets.all(MyAppSizes.sm),
-                                showBorder: true,
-                                backgroundColor: MyAppColors.transperant,
-                                child: Row(
-                                  children: [
-                                    // Icon
-                                    Flexible(
-                                      child: circularImage(
-                                        image: MyAppImages.githubLightLogo,
-                                        backgroundColor: Colors.transparent,
-                                        overlayColor: dark
-                                            ? MyAppColors.light
-                                            : MyAppColors.dark,
-                                      ),
-                                    ),
-                                    const SizedBox(
-                                      width: MyAppSizes.spaceBtwItems / 3,
-                                    ),
-                                    // Text
-                                    Expanded(
-                                      child: Column(
-                                        mainAxisSize: MainAxisSize.min,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          brandTitleWithVerification(
-                                            title: "Nike",
-                                            brandTextSize: TextSizes.large,
-                                          ),
-                                          Text(
-                                            "256 products",
-                                            overflow: TextOverflow.ellipsis,
-                                            style: Theme.of(context)
-                                                .textTheme
-                                                .labelMedium,
-                                          )
-                                        ],
-                                      ),
-                                    )
-                                  ],
-                                ),
-                              ),
-                            );
-                          })
-                    ],
-                  ),
-                ),
-              )
-            ];
-          },
-          body: Container()),
+                          SizedBox(
+                            height: MyAppSizes.spaceBtwSections / 1.7,
+                          ),
+
+                          /// Feature Brands
+                          sectionHeading(
+                            title: "Feature Brands",
+                            onPressed: () {},
+                          ),
+
+                          const SizedBox(
+                            height: MyAppSizes.spaceBtwItems / 1.5,
+                          ),
+
+                          gridLayout(
+                              itemCount: 4,
+                              extendMainAxis: 80,
+                              itemBuilder: (_, index) {
+                                return const brandCard(
+                                  image: MyAppImages.githubLightLogo,
+                                  title: 'Nike',
+                                );
+                              })
+                        ],
+                      ),
+                    ),
+                    bottom: const tabBar(
+                      tabs: [
+                        Tab(child: Text("Sports")),
+                        Tab(child: Text("Furniture")),
+                        Tab(child: Text("Electronics")),
+                        Tab(child: Text("Clothes")),
+                        Tab(child: Text("Cosmetics")),
+                      ],
+                    ))
+              ];
+            },
+            body: TabBarView(
+              children: [
+                categoryTab(),
+                categoryTab(),
+                categoryTab(),
+                categoryTab(),
+                categoryTab(),
+              ],
+            )),
+      ),
     );
   }
 }
