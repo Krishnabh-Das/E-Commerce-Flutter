@@ -22,7 +22,7 @@ class productCartVertical extends StatelessWidget {
     return GestureDetector(
       onTap: () {},
       child: Container(
-        padding: EdgeInsets.all(2),
+        padding: const EdgeInsets.all(2),
         decoration: BoxDecoration(
             boxShadow: [shadowStyle.verticalProductShadow],
             borderRadius: BorderRadius.circular(MyAppSizes.productImageRadius),
@@ -33,7 +33,7 @@ class productCartVertical extends StatelessWidget {
             /// --Image
             roundedContainer(
               height: 210,
-              padding: EdgeInsets.all(MyAppSizes.sm),
+              padding: const EdgeInsets.all(MyAppSizes.sm),
               backgroundColor: dark ? MyAppColors.dark : MyAppColors.light,
               child: Stack(
                 children: [
@@ -81,7 +81,7 @@ class productCartVertical extends StatelessWidget {
             ),
 
             /// --Details
-            Padding(
+            const Padding(
               padding: EdgeInsets.only(left: MyAppSizes.sm),
               child: Column(
                 crossAxisAlignment:
@@ -103,7 +103,7 @@ class productCartVertical extends StatelessWidget {
               children: [
                 // Price
                 const Padding(
-                  padding: const EdgeInsets.only(left: MyAppSizes.sm - 1),
+                  padding: EdgeInsets.only(left: MyAppSizes.sm - 1),
                   child: productPriceText(priceText: "35.55"),
                 ),
 

@@ -27,7 +27,7 @@ class loginScreen extends StatelessWidget {
                 loginHeader(dark: dark),
 
                 ///Form
-                loginForm(),
+                const loginForm(),
 
                 /// Divider
                 dividerStyle(
@@ -39,7 +39,7 @@ class loginScreen extends StatelessWidget {
                 ),
 
                 /// Footer
-                socialButton(),
+                const socialButton(),
               ],
             )),
       ),

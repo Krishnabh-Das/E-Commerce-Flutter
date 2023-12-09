@@ -1,4 +1,3 @@
-import 'dart:ffi';
 
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:ecommerce/features/shop/screens/home/home.dart';
@@ -21,7 +20,7 @@ class _demoState extends State<demo> {
       Container(
         color: Colors.red,
       ),
-      homeScreen(),
+      const homeScreen(),
       Container(
         color: Colors.blue,
       ),

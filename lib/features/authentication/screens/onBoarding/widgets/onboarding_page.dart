@@ -27,7 +27,7 @@ class onBoardingPage extends StatelessWidget {
             style: Theme.of(context).textTheme.headlineMedium,
             textAlign: TextAlign.center,
           ),
-          SizedBox(
+          const SizedBox(
             height: MyAppSizes.spaceBtwItems,
           ),
           Text(

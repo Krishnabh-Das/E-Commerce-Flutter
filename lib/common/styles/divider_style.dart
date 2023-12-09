@@ -1,7 +1,5 @@
 import 'package:ecommerce/utils/constants/colors.dart';
-import 'package:ecommerce/utils/constants/text_strings.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class dividerStyle extends StatelessWidget {
   dividerStyle({super.key, required this.dark, required this.dividerText});

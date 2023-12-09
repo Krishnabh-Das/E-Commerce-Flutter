@@ -29,7 +29,7 @@ class brandCard extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: roundedContainer(
-        padding: EdgeInsets.all(MyAppSizes.sm),
+        padding: const EdgeInsets.all(MyAppSizes.sm),
         borderColor: color,
         showBorder: showBorder,
         backgroundColor: MyAppColors.transperant,

@@ -11,7 +11,7 @@ class MyAppChipTheme {
     checkmarkColor: Colors.white,
   );
 
-  static ChipThemeData darkChipTheme = ChipThemeData(
+  static ChipThemeData darkChipTheme = const ChipThemeData(
     disabledColor: Colors.grey,
     labelStyle: TextStyle(color: Colors.white),
     selectedColor: Colors.blue,

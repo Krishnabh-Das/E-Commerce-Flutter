@@ -1,13 +1,9 @@
 import 'package:ecommerce/common/widgets/appbar/appbar.dart';
 import 'package:ecommerce/common/widgets/appbar/tabbar.dart';
-import 'package:ecommerce/common/widgets/brands/brand_show_case.dart';
-import 'package:ecommerce/common/widgets/custom_shapes/containers/rounded_container.dart';
 import 'package:ecommerce/common/widgets/custom_shapes/containers/search_container.dart';
-import 'package:ecommerce/common/widgets/image_shape/circular_image.dart';
 import 'package:ecommerce/common/widgets/layouts/grid_layout.dart';
 import 'package:ecommerce/common/widgets/products/cart/cart_menu_icon.dart';
 import 'package:ecommerce/common/widgets/brands/brand_card.dart';
-import 'package:ecommerce/common/widgets/texts/brand_title_with_verfiedIcon.dart';
 import 'package:ecommerce/common/widgets/texts/section_heading.dart';
 import 'package:ecommerce/features/shop/screens/store/widgets/category_tab.dart';
 import 'package:ecommerce/utils/constants/colors.dart';
@@ -48,16 +44,16 @@ class Store extends StatelessWidget {
                         dark ? MyAppColors.black : MyAppColors.textWhite,
                     expandedHeight: 410,
                     flexibleSpace: Padding(
-                      padding: EdgeInsets.fromLTRB(
+                      padding: const EdgeInsets.fromLTRB(
                           MyAppSizes.defaultSpace / 1.5,
                           5,
                           MyAppSizes.defaultSpace / 1.5,
                           MyAppSizes.defaultSpace / 1.5),
                       child: ListView(
                         shrinkWrap: true,
-                        physics: NeverScrollableScrollPhysics(),
+                        physics: const NeverScrollableScrollPhysics(),
                         children: [
-                          SizedBox(
+                          const SizedBox(
                             height: MyAppSizes.spaceBtwItems,
                           ),
 
@@ -69,7 +65,7 @@ class Store extends StatelessWidget {
                             padding: EdgeInsets.zero,
                           ),
 
-                          SizedBox(
+                          const SizedBox(
                             height: MyAppSizes.spaceBtwSections / 1.7,
                           ),
 
@@ -106,7 +102,7 @@ class Store extends StatelessWidget {
                     ))
               ];
             },
-            body: TabBarView(
+            body: const TabBarView(
               children: [
                 categoryTab(),
                 categoryTab(),

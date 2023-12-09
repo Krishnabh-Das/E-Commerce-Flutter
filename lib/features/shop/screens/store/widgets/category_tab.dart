@@ -14,22 +14,22 @@ class categoryTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
-        physics: NeverScrollableScrollPhysics(),
+        physics: const NeverScrollableScrollPhysics(),
         shrinkWrap: true,
         children: [
           Padding(
-            padding: EdgeInsets.all(MyAppSizes.defaultSpace / 1.5),
+            padding: const EdgeInsets.all(MyAppSizes.defaultSpace / 1.5),
             child: Column(
               children: [
                 // --Brands
-                brandShowcase(
+                const brandShowcase(
                   images: [
                     MyAppImages.product2,
                     MyAppImages.product3,
                     MyAppImages.product4
                   ],
                 ),
-                brandShowcase(
+                const brandShowcase(
                   title: "Nike",
                   text: "92 products",
                   images: [
@@ -49,7 +49,7 @@ class categoryTab extends StatelessWidget {
                 gridLayout(
                     itemCount: 4,
                     itemBuilder: (_, index) {
-                      return productCartVertical();
+                      return const productCartVertical();
                     }),
                 const SizedBox(
                   height: MyAppSizes.spaceBtwItems / 1.5,

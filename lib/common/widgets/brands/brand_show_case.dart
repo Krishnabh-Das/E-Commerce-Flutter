@@ -21,11 +21,11 @@ class brandShowcase extends StatelessWidget {
   Widget build(BuildContext context) {
     final dark = MyAppHelperFunctions.isDarkMode(context);
     return roundedContainer(
-      padding: EdgeInsets.all(MyAppSizes.md / 1.4),
+      padding: const EdgeInsets.all(MyAppSizes.md / 1.4),
       borderColor: MyAppColors.darkGrey,
       showBorder: true,
       backgroundColor: Colors.transparent,
-      margin: EdgeInsets.only(bottom: MyAppSizes.spaceBtwItems),
+      margin: const EdgeInsets.only(bottom: MyAppSizes.spaceBtwItems),
       child: Column(
         children: [
           // Brand with Product Count
@@ -53,7 +53,7 @@ class brandShowcase extends StatelessWidget {
         height: 100,
         backgroundColor: dark ? MyAppColors.darkerGrey : MyAppColors.light,
         margin: const EdgeInsets.only(right: MyAppSizes.sm),
-        padding: EdgeInsets.all(MyAppSizes.sm / 1.5),
+        padding: const EdgeInsets.all(MyAppSizes.sm / 1.5),
         child: Image(fit: BoxFit.contain, image: AssetImage(image)),
       ),
     );

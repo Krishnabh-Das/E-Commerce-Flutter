@@ -24,20 +24,20 @@ class successScreen extends StatelessWidget {
         automaticallyImplyLeading: false,
         actions: [
           IconButton(
-              onPressed: () => Get.offAll(() => loginScreen()),
-              icon: Icon(Icons.cancel_sharp))
+              onPressed: () => Get.offAll(() => const loginScreen()),
+              icon: const Icon(Icons.cancel_sharp))
         ],
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(MyAppSizes.defaultSpace),
+          padding: const EdgeInsets.all(MyAppSizes.defaultSpace),
           child: Column(
             children: [
               /// Image
               Image(
                   width: MyAppHelperFunctions.screenWidth(),
                   image: AssetImage(image)),
-              SizedBox(
+              const SizedBox(
                 height: MyAppSizes.spaceBtwItems,
               ),
 

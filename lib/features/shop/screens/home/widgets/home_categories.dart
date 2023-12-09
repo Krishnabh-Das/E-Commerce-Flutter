@@ -27,7 +27,7 @@ class homeCategories extends StatelessWidget {
           ),
 
           const SizedBox(
-            height: MyAppSizes.spaceBtwItems,
+            height: MyAppSizes.spaceBtwItems * 1.2,
           ),
 
           /// List of Categories

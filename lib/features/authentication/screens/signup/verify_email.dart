@@ -1,4 +1,3 @@
-import 'package:ecommerce/app.dart';
 import 'package:ecommerce/common/widgets/success_screen.dart';
 import 'package:ecommerce/features/authentication/screens/login/login.dart';
 import 'package:ecommerce/utils/constants/colors.dart';
@@ -20,19 +19,19 @@ class verifyEmailScreen extends StatelessWidget {
         automaticallyImplyLeading: false,
         actions: [
           IconButton(
-              onPressed: () => Get.offAll(() => loginScreen()),
-              icon: Icon(Icons.cancel_sharp))
+              onPressed: () => Get.offAll(() => const loginScreen()),
+              icon: const Icon(Icons.cancel_sharp))
         ],
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(MyAppSizes.defaultSpace * 0.7),
+          padding: const EdgeInsets.all(MyAppSizes.defaultSpace * 0.7),
           child: Column(
             children: [
               /// Image
               Image(
                   width: MyAppHelperFunctions.screenWidth(),
-                  image: AssetImage(MyAppImages.success)),
+                  image: const AssetImage(MyAppImages.success)),
               const SizedBox(
                 height: MyAppSizes.spaceBtwItems,
               ),
@@ -87,7 +86,7 @@ class verifyEmailScreen extends StatelessWidget {
                 width: double.infinity,
                 child: TextButton(
                   onPressed: () {},
-                  child: Text(MyAppTexts.resendEmail),
+                  child: const Text(MyAppTexts.resendEmail),
                 ),
               ),
             ],

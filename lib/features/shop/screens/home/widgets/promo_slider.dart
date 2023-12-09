@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class promoSlider extends StatelessWidget {
-  promoSlider({super.key, required this.banners, required this.controller});
+  const promoSlider({super.key, required this.banners, required this.controller});
 
   final controller;
   final List<String> banners;

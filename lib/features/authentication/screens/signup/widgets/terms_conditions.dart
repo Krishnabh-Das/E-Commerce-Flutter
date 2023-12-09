@@ -19,7 +19,7 @@ class signupTermsConditions extends StatelessWidget {
         RichText(
             text: TextSpan(children: <TextSpan>[
           TextSpan(
-              text: "${MyAppTexts.iAgreeTo}",
+              text: MyAppTexts.iAgreeTo,
               style: Theme.of(context)
                   .textTheme
                   .bodySmall

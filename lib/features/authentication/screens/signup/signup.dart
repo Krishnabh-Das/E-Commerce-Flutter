@@ -1,7 +1,6 @@
 import 'package:ecommerce/common/styles/divider_style.dart';
 import 'package:ecommerce/common/styles/social_button.dart';
 import 'package:ecommerce/features/authentication/screens/signup/widgets/signup_form.dart';
-import 'package:ecommerce/utils/constants/colors.dart';
 import 'package:ecommerce/utils/constants/sizes.dart';
 import 'package:ecommerce/utils/constants/text_strings.dart';
 import 'package:ecommerce/utils/helpers/helper_function.dart';
@@ -19,7 +18,7 @@ class signup extends StatelessWidget {
       appBar: AppBar(),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(MyAppSizes.defaultSpace * 0.8),
+          padding: const EdgeInsets.all(MyAppSizes.defaultSpace * 0.8),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -34,7 +33,7 @@ class signup extends StatelessWidget {
               ),
 
               /// Form
-              signupForm(),
+              const signupForm(),
 
               const SizedBox(
                 height: MyAppSizes.spaceBtwSections,
@@ -49,7 +48,7 @@ class signup extends StatelessWidget {
               ),
 
               /// Social Buttons
-              socialButton(),
+              const socialButton(),
             ],
           ),
         ),

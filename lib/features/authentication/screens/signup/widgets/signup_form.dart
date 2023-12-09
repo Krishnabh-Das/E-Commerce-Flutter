@@ -96,7 +96,7 @@ class signupForm extends StatelessWidget {
         ),
 
         /// Terms & Condition Checkbox
-        signupTermsConditions(),
+        const signupTermsConditions(),
 
         const SizedBox(
           height: MyAppSizes.spaceBtwInputFields,
