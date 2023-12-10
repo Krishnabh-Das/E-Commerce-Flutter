@@ -22,6 +22,8 @@ class MyAppHelperFunctions {
       return Colors.black;
     } else if (value == 'White') {
       return Colors.white;
+    } else if (value == 'Yellow') {
+      return Colors.yellow;
     }
 
     return null; // Return null for any other value or handle accordingly

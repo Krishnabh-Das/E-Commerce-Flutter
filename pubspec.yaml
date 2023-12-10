@@ -39,6 +39,9 @@ dependencies:
   # Home Banner
   carousel_slider: ^4.2.1
 
+  # Read More
+  readmore: ^2.2.0
+
 
 dev_dependencies:
   flutter_test:

@@ -8,11 +8,13 @@ class circularIcon extends StatelessWidget {
       {super.key,
       this.icon = Iconsax.heart5,
       this.radius = 40,
-      required this.color});
+      required this.color,
+      this.backgroundColor});
 
   final IconData? icon;
   final double? radius;
   final Color color;
+  final Color? backgroundColor;
 
   @override
   Widget build(BuildContext context) {
@@ -21,9 +23,11 @@ class circularIcon extends StatelessWidget {
       height: radius,
       decoration: BoxDecoration(
           shape: BoxShape.circle,
-          color: dark
-              ? MyAppColors.black.withOpacity(0.9)
-              : MyAppColors.textWhite.withOpacity(0.9)),
+          color: backgroundColor != null
+              ? backgroundColor
+              : dark
+                  ? MyAppColors.black.withOpacity(0.9)
+                  : MyAppColors.textWhite.withOpacity(0.9)),
       child: IconButton(
           onPressed: () {},
           icon: Icon(

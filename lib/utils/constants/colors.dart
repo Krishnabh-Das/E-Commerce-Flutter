@@ -49,6 +49,7 @@ class MyAppColors {
 
   // Neutral Shades
   static const Color black = Color(0XFF232323);
+  static const Color darkishGrey = Color.fromARGB(255, 59, 58, 58);
   static const Color darkerGrey = Color(0XFF4F4F4F);
   static const Color darkGrey = Color(0XFF939393);
   static const Color grey = Color(0XFFE0E0E0);

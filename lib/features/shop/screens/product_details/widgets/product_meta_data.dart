@@ -94,7 +94,9 @@ class productMetaData extends StatelessWidget {
               width: 32,
               height: 32,
               image: MyAppImages.googleLogo,
-              overlayColor: dark ? MyAppColors.dark : MyAppColors.light,
+            ),
+            const SizedBox(
+              width: MyAppSizes.spaceBtwItems / 1.5,
             ),
             const brandTitleWithVerification(
               title: "Nike",
