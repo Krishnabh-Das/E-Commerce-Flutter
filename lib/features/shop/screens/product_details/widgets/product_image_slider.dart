@@ -23,12 +23,22 @@ class productImageSlider extends StatelessWidget {
       child: Stack(children: [
         // Main Large Image
         const SizedBox(
-            height: 450,
+            height: 445,
             child: Padding(
               padding: EdgeInsets.all(MyAppSizes.productImageRadius * 2),
               child:
-                  Center(child: Image(image: AssetImage(MyAppImages.product2))),
+                  Center(child: Image(image: AssetImage(MyAppImages.product3))),
             )),
+
+        // App Bar
+        const appBar(
+          actions: [
+            circularIcon(
+              color: MyAppColors.red,
+            )
+          ],
+          showBackArrow: true,
+        ),
 
         // Image Slider
         Positioned(
@@ -39,6 +49,7 @@ class productImageSlider extends StatelessWidget {
             height: 77,
             child: ListView.separated(
               shrinkWrap: true,
+              physics: AlwaysScrollableScrollPhysics(),
               scrollDirection: Axis.horizontal,
               separatorBuilder: (_, __) => const SizedBox(
                 width: MyAppSizes.spaceBtwItems / 1.3,
@@ -53,16 +64,6 @@ class productImageSlider extends StatelessWidget {
             ),
           ),
         ),
-
-        // App Bar
-        const appBar(
-          actions: [
-            circularIcon(
-              color: MyAppColors.red,
-            )
-          ],
-          showBackArrow: true,
-        )
       ]),
     ));
   }

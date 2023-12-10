@@ -93,9 +93,7 @@ class productMetaData extends StatelessWidget {
             circularImage(
               width: 32,
               height: 32,
-              image: dark
-                  ? MyAppImages.githubDarkLogo
-                  : MyAppImages.githubLightLogo,
+              image: MyAppImages.googleLogo,
               overlayColor: dark ? MyAppColors.dark : MyAppColors.light,
             ),
             const brandTitleWithVerification(

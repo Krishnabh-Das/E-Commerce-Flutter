@@ -27,7 +27,7 @@ class favouriteScreen extends StatelessWidget {
           )),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(MyAppSizes.defaultSpace),
+          padding: const EdgeInsets.all(MyAppSizes.defaultSpace / 1.5),
           child: gridLayout(
               itemCount: 6,
               itemBuilder: (_, index) {

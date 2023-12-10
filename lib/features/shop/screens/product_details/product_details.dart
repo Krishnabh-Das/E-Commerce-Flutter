@@ -1,3 +1,4 @@
+import 'package:ecommerce/common/widgets/custom_shapes/curved_edges/curved_edge_widget.dart';
 import 'package:ecommerce/features/shop/screens/product_details/widgets/product_image_slider.dart';
 import 'package:ecommerce/features/shop/screens/product_details/widgets/product_meta_data.dart';
 import 'package:ecommerce/features/shop/screens/product_details/widgets/rating_and_share.dart';
@@ -12,15 +13,26 @@ class productDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     final dark = MyAppHelperFunctions.isDarkMode(context);
 
-    return const Scaffold(
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            /// Product Image Slider
-            productImageSlider(),
+    return Scaffold(
+        body: NestedScrollView(
+            headerSliverBuilder: (_, innnerBoxIsScrolled) {
+              return [
+                const SliverAppBar(
+                  automaticallyImplyLeading: false,
+                  pinned: true,
+                  floating: true,
+                  expandedHeight: 420,
+                  flexibleSpace: curvedEdgeWidget(
+                    child: FlexibleSpaceBar(
+                      background: productImageSlider(),
+                    ),
+                  ),
+                )
+              ];
+            },
 
             /// Details
-            Padding(
+            body: const Padding(
               padding: EdgeInsets.only(
                   right: MyAppSizes.defaultSpace,
                   left: MyAppSizes.defaultSpace,
@@ -38,10 +50,6 @@ class productDetails extends StatelessWidget {
                   // Reviews
                 ],
               ),
-            )
-          ],
-        ),
-      ),
-    );
+            )));
   }
 }

@@ -40,15 +40,13 @@ class productCartVertical extends StatelessWidget {
               child: Stack(
                 children: [
                   // Thumbnail Image
-                  Positioned(
-                      left: 0,
-                      right: 0,
-                      top: 25,
-                      child: roundedImage(
-                        imageUrl: MyAppImages.product2,
-                        backgroundColor:
-                            dark ? MyAppColors.dark : MyAppColors.light,
-                      )),
+                  Center(
+                    child: roundedImage(
+                      imageUrl: MyAppImages.product3,
+                      backgroundColor:
+                          dark ? MyAppColors.dark : MyAppColors.light,
+                    ),
+                  ),
 
                   // Sale Tag
                   Positioned(
