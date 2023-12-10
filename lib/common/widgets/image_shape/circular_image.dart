@@ -1,12 +1,11 @@
 import 'package:ecommerce/utils/constants/colors.dart';
-import 'package:ecommerce/utils/constants/images_strings.dart';
 import 'package:ecommerce/utils/constants/sizes.dart';
 import 'package:ecommerce/utils/helpers/helper_function.dart';
 import 'package:flutter/material.dart';
 
 class circularImage extends StatelessWidget {
   const circularImage({
-    super.key,
+    Key? key,
     this.fit = BoxFit.cover,
     required this.image,
     this.isNetworkImage = false,
@@ -15,7 +14,7 @@ class circularImage extends StatelessWidget {
     this.width = 56,
     this.height = 56,
     this.padding = MyAppSizes.sm,
-  });
+  }) : super(key: key);
 
   final BoxFit? fit;
   final String image;
@@ -32,17 +31,18 @@ class circularImage extends StatelessWidget {
       height: height,
       padding: EdgeInsets.all(padding!),
       decoration: BoxDecoration(
-          color: backgroundColor ??
-              (dark ? MyAppColors.black : MyAppColors.textWhite),
-          borderRadius: BorderRadius.circular(100)),
-      child: Image(
-        fit: fit,
-        image: isNetworkImage
-            ? NetworkImage(image)
-            : AssetImage(dark
-                ? MyAppImages.githubDarkLogo
-                : MyAppImages.githubLightLogo) as ImageProvider,
-        color: overlayColor,
+        color: backgroundColor ??
+            (dark ? MyAppColors.black : MyAppColors.textWhite),
+        shape: BoxShape.circle,
+      ),
+      child: ClipOval(
+        child: Image(
+          fit: fit,
+          image: isNetworkImage
+              ? NetworkImage(image)
+              : AssetImage(image) as ImageProvider,
+          color: overlayColor,
+        ),
       ),
     );
   }

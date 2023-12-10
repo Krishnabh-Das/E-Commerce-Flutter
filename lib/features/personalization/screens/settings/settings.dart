@@ -1,13 +1,13 @@
-import 'package:ecommerce/common/widgets/appbar/appbar.dart';
 import 'package:ecommerce/common/widgets/custom_shapes/containers/circular_container.dart';
 import 'package:ecommerce/common/widgets/custom_shapes/curved_edges/curved_edge.dart';
-import 'package:ecommerce/common/widgets/list_tiles/user_profile_tile.dart';
 import 'package:ecommerce/common/widgets/texts/section_heading.dart';
+import 'package:ecommerce/features/personalization/screens/profile/profile.dart';
 import 'package:ecommerce/features/personalization/screens/settings/widgets/account_and_app_settings.dart';
 import 'package:ecommerce/features/personalization/screens/settings/widgets/profile_card.dart';
 import 'package:ecommerce/utils/constants/colors.dart';
 import 'package:ecommerce/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class settingsScreen extends StatelessWidget {
   const settingsScreen({super.key});
@@ -30,22 +30,28 @@ class settingsScreen extends StatelessWidget {
                     children: [
                       Container(
                         color: MyAppColors.primary,
-                        child: profileCard(),
+                        child: profileCard(
+                          onPressed: () => Get.to(() => const profile()),
+                        ),
                       ),
                       Positioned(
                         top: -150,
                         right: -250,
-                        child: circularContainer(
-                          backgroundColor:
-                              MyAppColors.textWhite.withOpacity(0.1),
+                        child: IgnorePointer(
+                          child: circularContainer(
+                            backgroundColor:
+                                MyAppColors.textWhite.withOpacity(0.1),
+                          ),
                         ),
                       ),
                       Positioned(
                         top: 100,
                         right: -300,
-                        child: circularContainer(
-                          backgroundColor:
-                              MyAppColors.textWhite.withOpacity(0.1),
+                        child: IgnorePointer(
+                          child: circularContainer(
+                            backgroundColor:
+                                MyAppColors.textWhite.withOpacity(0.1),
+                          ),
                         ),
                       ),
                     ],
@@ -59,7 +65,7 @@ class settingsScreen extends StatelessWidget {
         // --Body
         body: const SingleChildScrollView(
           child: Padding(
-            padding: const EdgeInsets.all(MyAppSizes.defaultSpace / 1.2),
+            padding: EdgeInsets.all(MyAppSizes.defaultSpace / 1.2),
             child: Column(
               children: [
                 // Account Settings

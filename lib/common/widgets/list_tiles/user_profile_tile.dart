@@ -7,15 +7,18 @@ import 'package:iconsax/iconsax.dart';
 class userProfileTile extends StatelessWidget {
   const userProfileTile({
     super.key,
+    this.onPressed,
   });
+
+  final VoidCallback? onPressed;
 
   @override
   Widget build(BuildContext context) {
     return ListTile(
       leading: const circularImage(
-        image: MyAppImages.googleLogo,
-        width: 50,
-        height: 50,
+        image: MyAppImages.profile,
+        width: 60,
+        height: 60,
         padding: 0,
       ),
       title: Text(
@@ -32,9 +35,12 @@ class userProfileTile extends StatelessWidget {
             .bodyMedium!
             .apply(color: MyAppColors.textWhite),
       ),
-      trailing: const Icon(
-        Iconsax.edit,
-        color: MyAppColors.textWhite,
+      trailing: InkWell(
+        onTap: onPressed,
+        child: const Icon(
+          Iconsax.edit,
+          color: MyAppColors.textWhite,
+        ),
       ),
     );
   }

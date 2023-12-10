@@ -55,4 +55,5 @@ class MyAppColors {
 
   static const Color transperant = Colors.transparent;
   static const Color red = Colors.red;
+  static const Color amber = Colors.amber;
 }

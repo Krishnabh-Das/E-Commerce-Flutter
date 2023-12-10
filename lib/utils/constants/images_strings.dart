@@ -35,4 +35,7 @@ class MyAppImages {
   static const String product1 = "assets/images/products/product1.png";
   static const String product3 = "assets/images/products/product3.png";
   static const String product4 = "assets/images/products/product4.png";
+
+  // Profile
+  static const String profile = "assets/images/profile/profile.png";
 }

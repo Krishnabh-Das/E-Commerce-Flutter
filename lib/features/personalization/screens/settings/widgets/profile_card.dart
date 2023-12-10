@@ -7,7 +7,10 @@ import 'package:flutter/material.dart';
 class profileCard extends StatelessWidget {
   const profileCard({
     super.key,
+    this.onPressed,
   });
+
+  final VoidCallback? onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +27,12 @@ class profileCard extends StatelessWidget {
                 .apply(color: MyAppColors.textWhite),
           ),
         ),
-        const userProfileTile(),
+        const SizedBox(
+          height: MyAppSizes.spaceBtwItems / 2.5,
+        ),
+        userProfileTile(
+          onPressed: onPressed,
+        ),
         const SizedBox(
           height: MyAppSizes.spaceBtwSections,
         ),
