@@ -23,18 +23,18 @@ class productAttributes extends StatelessWidget {
 
         // Attributes Pricing and Description
         roundedContainer(
-          padding: EdgeInsets.all(MyAppSizes.md),
+          padding: const EdgeInsets.all(MyAppSizes.md),
           backgroundColor: dark ? MyAppColors.darkerGrey : MyAppColors.grey,
           child: Column(
             children: [
               // Title, Price & Stock Price
               Row(
                 children: [
-                  sectionHeading(
+                  const sectionHeading(
                     title: "Variation",
                     showActionButton: false,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: MyAppSizes.spaceBtwItems,
                   ),
                   Column(
@@ -42,7 +42,7 @@ class productAttributes extends StatelessWidget {
                     children: [
                       Row(
                         children: [
-                          productTitleText(
+                          const productTitleText(
                             title: "Price :  ",
                           ),
 
@@ -55,12 +55,12 @@ class productAttributes extends StatelessWidget {
                                 .apply(decoration: TextDecoration.lineThrough),
                           ),
 
-                          SizedBox(
+                          const SizedBox(
                             width: MyAppSizes.spaceBtwItems / 2,
                           ),
 
                           // Sale Price
-                          productPriceText(
+                          const productPriceText(
                             priceText: "20",
                             isLarge: true,
                           ),
@@ -68,7 +68,7 @@ class productAttributes extends StatelessWidget {
                       ),
                       Row(
                         children: [
-                          productTitleText(title: "Stock : "),
+                          const productTitleText(title: "Stock : "),
                           Text(
                             "In Stock",
                             style: Theme.of(context).textTheme.titleMedium,
@@ -80,12 +80,12 @@ class productAttributes extends StatelessWidget {
                 ],
               ),
 
-              SizedBox(
+              const SizedBox(
                 height: MyAppSizes.spaceBtwItems / 2.5,
               ),
 
               // Variation Description
-              productTitleText(
+              const productTitleText(
                 title:
                     "Dekho mai baitha huh kismat ke bharose, kismat mai hoga toh paisa khud chalke aayega.",
                 smallSize: true,
@@ -95,7 +95,7 @@ class productAttributes extends StatelessWidget {
           ),
         ),
 
-        SizedBox(
+        const SizedBox(
           height: MyAppSizes.spaceBtwItems,
         ),
 

@@ -48,8 +48,9 @@ class MyAppColors {
   static const Color info = Color(0XFF1976D2);
 
   // Neutral Shades
+  static const Color darkBlack = Color.fromARGB(255, 0, 0, 0);
   static const Color black = Color(0XFF232323);
-  static const Color darkishGrey = Color.fromARGB(255, 59, 58, 58);
+  static const Color darkishGrey = Color.fromARGB(255, 65, 63, 63);
   static const Color darkerGrey = Color(0XFF4F4F4F);
   static const Color darkGrey = Color(0XFF939393);
   static const Color grey = Color(0XFFE0E0E0);
@@ -57,4 +58,5 @@ class MyAppColors {
   static const Color transperant = Colors.transparent;
   static const Color red = Colors.red;
   static const Color amber = Colors.amber;
+  static const Color yellow = Colors.yellow;
 }

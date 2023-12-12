@@ -36,16 +36,15 @@ class choiceChip extends StatelessWidget {
                 backgroundColor: MyAppHelperFunctions.getColor(text),
               )
             : null,
-        shape:
-            MyAppHelperFunctions.getColor(text) != null ? CircleBorder() : null,
-        backgroundColor: MyAppHelperFunctions.getColor(text) != null
-            ? MyAppHelperFunctions.getColor(text)
+        shape: MyAppHelperFunctions.getColor(text) != null
+            ? const CircleBorder()
             : null,
+        backgroundColor: MyAppHelperFunctions.getColor(text),
         labelPadding: MyAppHelperFunctions.getColor(text) != null
-            ? EdgeInsets.all(0)
+            ? const EdgeInsets.all(0)
             : null,
         padding: MyAppHelperFunctions.getColor(text) != null
-            ? EdgeInsets.all(0)
+            ? const EdgeInsets.all(0)
             : null,
       ),
     );

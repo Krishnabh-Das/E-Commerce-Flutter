@@ -19,7 +19,7 @@ class navigationMenu extends StatelessWidget {
           destinations: const [
             NavigationDestination(icon: Icon(Iconsax.home), label: "Home"),
             NavigationDestination(icon: Icon(Iconsax.shop), label: "Store"),
-            NavigationDestination(icon: Icon(Iconsax.heart), label: "Withlist"),
+            NavigationDestination(icon: Icon(Iconsax.heart), label: "Wishlist"),
             NavigationDestination(icon: Icon(Iconsax.user), label: "Profile"),
           ],
           elevation: 0,

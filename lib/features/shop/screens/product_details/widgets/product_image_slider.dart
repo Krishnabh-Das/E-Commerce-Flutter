@@ -49,7 +49,7 @@ class productImageSlider extends StatelessWidget {
             height: 77,
             child: ListView.separated(
               shrinkWrap: true,
-              physics: AlwaysScrollableScrollPhysics(),
+              physics: const AlwaysScrollableScrollPhysics(),
               scrollDirection: Axis.horizontal,
               separatorBuilder: (_, __) => const SizedBox(
                 width: MyAppSizes.spaceBtwItems / 1.3,

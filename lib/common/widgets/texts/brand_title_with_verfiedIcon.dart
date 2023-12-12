@@ -14,6 +14,7 @@ class brandTitleWithVerification extends StatelessWidget {
     this.iconColor = MyAppColors.primary,
     this.textAlign = TextAlign.center,
     this.brandTextSize = TextSizes.small,
+    this.style,
   });
 
   final String title;
@@ -21,6 +22,7 @@ class brandTitleWithVerification extends StatelessWidget {
   final Color? textColor, iconColor;
   final TextAlign? textAlign;
   final TextSizes brandTextSize;
+  final TextStyle? style;
 
   @override
   Widget build(BuildContext context) {
@@ -34,6 +36,7 @@ class brandTitleWithVerification extends StatelessWidget {
           textAlign: textAlign,
           color: textColor,
           brandTextSize: brandTextSize,
+          style: style,
         )),
         const SizedBox(
           width: MyAppSizes.xs,

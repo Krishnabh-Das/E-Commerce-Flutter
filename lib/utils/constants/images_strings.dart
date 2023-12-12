@@ -38,4 +38,9 @@ class MyAppImages {
 
   // Profile
   static const String profile = "assets/images/profile/profile.png";
+
+  // Reviews
+  static const String person1 = "assets/images/reviews/person1.png";
+  static const String person2 = "assets/images/reviews/person2.png";
+  static const String person3 = "assets/images/reviews/person3.png";
 }

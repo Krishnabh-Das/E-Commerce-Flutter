@@ -1,7 +1,9 @@
 import 'package:ecommerce/common/widgets/list_tiles/settings_menu_tile.dart';
 import 'package:ecommerce/common/widgets/texts/section_heading.dart';
+import 'package:ecommerce/features/personalization/screens/address/address.dart';
 import 'package:ecommerce/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 
 class accountAndAppSettings extends StatelessWidget {
@@ -15,7 +17,7 @@ class accountAndAppSettings extends StatelessWidget {
           icon: Iconsax.safe_home,
           Title: "My Addresses",
           subtitle: "Set shopping delivery address",
-          onTap: () {},
+          onTap: () => Get.to(() => const address()),
         ),
         settingsMenuTile(
           icon: Iconsax.shopping_cart,

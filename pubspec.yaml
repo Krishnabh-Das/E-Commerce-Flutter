@@ -30,7 +30,7 @@ dependencies:
   # Splash Screen
   flutter_native_splash: ^2.3.6
 
-  # onBoarding Screen
+  # Page Indicator
   smooth_page_indicator: ^1.1.0
 
   # Navigation Bar
@@ -41,6 +41,9 @@ dependencies:
 
   # Read More
   readmore: ^2.2.0
+
+  # Rating Bar
+  flutter_rating_bar: ^4.0.1
 
 
 dev_dependencies:
@@ -60,6 +63,7 @@ flutter:
     - assets/images/homeBanner/
     - assets/images/products/
     - assets/images/profile/
+    - assets/images/reviews/
     - assets/logos/
     - assets/icons/
 

@@ -23,11 +23,10 @@ class circularIcon extends StatelessWidget {
       height: radius,
       decoration: BoxDecoration(
           shape: BoxShape.circle,
-          color: backgroundColor != null
-              ? backgroundColor
-              : dark
-                  ? MyAppColors.black.withOpacity(0.9)
-                  : MyAppColors.textWhite.withOpacity(0.9)),
+          color: backgroundColor ??
+              (dark
+                  ? MyAppColors.darkishGrey.withOpacity(0.5)
+                  : MyAppColors.textWhite.withOpacity(0.9))),
       child: IconButton(
           onPressed: () {},
           icon: Icon(

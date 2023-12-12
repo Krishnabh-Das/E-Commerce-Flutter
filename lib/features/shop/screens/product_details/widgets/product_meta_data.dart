@@ -88,17 +88,17 @@ class productMetaData extends StatelessWidget {
         ),
 
         /// Brand
-        Row(
+        const Row(
           children: [
             circularImage(
               width: 32,
               height: 32,
               image: MyAppImages.googleLogo,
             ),
-            const SizedBox(
+            SizedBox(
               width: MyAppSizes.spaceBtwItems / 1.5,
             ),
-            const brandTitleWithVerification(
+            brandTitleWithVerification(
               title: "Nike",
               brandTextSize: TextSizes.medium,
             ),

@@ -18,8 +18,13 @@ class bottomAddToCart extends StatelessWidget {
           horizontal: MyAppSizes.defaultSpace,
           vertical: MyAppSizes.defaultSpace / 2),
       decoration: BoxDecoration(
-          color: dark ? MyAppColors.darkishGrey : MyAppColors.light,
-          borderRadius: BorderRadius.only(
+          border: const Border(
+            top: BorderSide(color: MyAppColors.black, width: 0.5),
+            left: BorderSide(color: MyAppColors.black, width: 0.5),
+            right: BorderSide(color: MyAppColors.black, width: 0.5),
+          ),
+          color: dark ? MyAppColors.black : MyAppColors.light,
+          borderRadius: const BorderRadius.only(
               topLeft: Radius.circular(MyAppSizes.cardRadiusLg),
               topRight: Radius.circular(MyAppSizes.cardRadiusLg))),
       child: Row(
@@ -31,32 +36,32 @@ class bottomAddToCart extends StatelessWidget {
                 color: dark ? MyAppColors.black : MyAppColors.textWhite,
                 icon: Iconsax.minus,
                 backgroundColor:
-                    dark ? MyAppColors.darkGrey : MyAppColors.darkGrey,
+                    dark ? MyAppColors.darkGrey : MyAppColors.darkerGrey,
               ),
-              SizedBox(
+              const SizedBox(
                 width: MyAppSizes.spaceBtwItems,
               ),
               Text(
                 "2",
                 style: Theme.of(context).textTheme.headlineSmall,
               ),
-              SizedBox(
+              const SizedBox(
                 width: MyAppSizes.spaceBtwItems,
               ),
-              circularIcon(
+              const circularIcon(
                 color: MyAppColors.textWhite,
                 icon: Iconsax.add,
-                backgroundColor: MyAppColors.black,
+                backgroundColor: MyAppColors.darkBlack,
               ),
             ],
           ),
           ElevatedButton(
             onPressed: () {},
-            child: Text("Add to Cart"),
             style: ElevatedButton.styleFrom(
-                side: BorderSide(color: MyAppColors.black),
-                backgroundColor: MyAppColors.black,
-                padding: EdgeInsets.all(MyAppSizes.md)),
+                side: const BorderSide(color: MyAppColors.black),
+                backgroundColor: MyAppColors.darkBlack,
+                padding: const EdgeInsets.all(MyAppSizes.md)),
+            child: const Text("Add to Cart"),
           )
         ],
       ),
