@@ -45,6 +45,10 @@ dependencies:
   # Rating Bar
   flutter_rating_bar: ^4.0.1
 
+  # Google Font
+  google_fonts: ^6.1.0
+  font_awesome_flutter: ^10.6.0
+
 
 dev_dependencies:
   flutter_test:

@@ -43,4 +43,7 @@ class MyAppImages {
   static const String person1 = "assets/images/reviews/person1.png";
   static const String person2 = "assets/images/reviews/person2.png";
   static const String person3 = "assets/images/reviews/person3.png";
+
+  // Payment Icons
+  static const String paypal = "assets/icons/paypal.png";
 }

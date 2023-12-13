@@ -1,0 +1,5 @@
+final bool dark = MyAppHelperFunctions.isDarkMode(context);
+
+const SizedBox(height: MyAppSizes.spaceBtwSections),
+
+, style: Theme.of(context).textTheme

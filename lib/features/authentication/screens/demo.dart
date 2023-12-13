@@ -1,4 +1,3 @@
-
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:ecommerce/features/shop/screens/home/home.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +14,6 @@ class _demoState extends State<demo> {
   @override
   Widget build(BuildContext context) {
     int index = 2;
-    var color1 = Colors.white;
     var screens = [
       Container(
         color: Colors.red,

@@ -43,7 +43,7 @@ class addNewAddress extends StatelessWidget {
                 SizedBox(
                   height: MyAppSizes.textFormFieldHeight,
                   child: TextFormField(
-                    keyboardType: TextInputType.text,
+                    keyboardType: TextInputType.phone,
                     decoration: const InputDecoration(
                       prefixIcon: Icon(Iconsax.mobile),
                       labelText: "Phone Number",

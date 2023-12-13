@@ -3,7 +3,6 @@ import 'package:ecommerce/features/authentication/screens/signup/widgets/terms_c
 import 'package:ecommerce/utils/constants/colors.dart';
 import 'package:ecommerce/utils/constants/sizes.dart';
 import 'package:ecommerce/utils/constants/text_strings.dart';
-import 'package:ecommerce/utils/helpers/helper_function.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
@@ -13,8 +12,6 @@ class signupForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dark = MyAppHelperFunctions.isDarkMode(context);
-
     return Form(
         child: Column(
       children: [

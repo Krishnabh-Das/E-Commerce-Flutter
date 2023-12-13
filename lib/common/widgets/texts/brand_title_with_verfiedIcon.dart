@@ -29,15 +29,14 @@ class brandTitleWithVerification extends StatelessWidget {
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
-        Flexible(
-            child: brandTitleText(
+        brandTitleText(
           title: title,
           maxLines: maxLines,
           textAlign: textAlign,
           color: textColor,
           brandTextSize: brandTextSize,
           style: style,
-        )),
+        ),
         const SizedBox(
           width: MyAppSizes.xs,
         ),

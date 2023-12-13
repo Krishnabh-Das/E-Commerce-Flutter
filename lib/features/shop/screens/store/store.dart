@@ -30,8 +30,8 @@ class Store extends StatelessWidget {
             ),
             actions: [
               cartCounterIcon(
-                  iconColor: dark ? MyAppColors.light : MyAppColors.dark,
-                  onPressed: () {})
+                iconColor: dark ? MyAppColors.light : MyAppColors.dark,
+              )
             ]),
         body: NestedScrollView(
             headerSliverBuilder: (_, innerBoxIsScrolled) {
