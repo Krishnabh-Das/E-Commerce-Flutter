@@ -1,6 +1,7 @@
 import 'package:ecommerce/common/widgets/list_tiles/settings_menu_tile.dart';
 import 'package:ecommerce/common/widgets/texts/section_heading.dart';
 import 'package:ecommerce/features/personalization/screens/address/address.dart';
+import 'package:ecommerce/features/shop/screens/order/order.dart';
 import 'package:ecommerce/utils/constants/sizes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -29,7 +30,7 @@ class accountAndAppSettings extends StatelessWidget {
           icon: Iconsax.bag_tick,
           Title: "My Orders",
           subtitle: "In-progress and Completed Orders",
-          onTap: () {},
+          onTap: () => Get.to(() => OrderScreen()),
         ),
         settingsMenuTile(
           icon: Iconsax.bank,
