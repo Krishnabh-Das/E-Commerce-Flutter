@@ -4,6 +4,7 @@ import 'package:ecommerce/common/widgets/layouts/grid_layout.dart';
 import 'package:ecommerce/common/widgets/products/cart/product_cart_vertical.dart';
 import 'package:ecommerce/common/widgets/texts/section_heading.dart';
 import 'package:ecommerce/features/shop/controllers/carousal_controller.dart';
+import 'package:ecommerce/features/shop/screens/all_products/all_products.dart';
 import 'package:ecommerce/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:ecommerce/features/shop/screens/home/widgets/home_categories.dart';
 import 'package:ecommerce/features/shop/screens/home/widgets/promo_slider.dart';
@@ -70,7 +71,7 @@ class homeScreen extends StatelessWidget {
 
                   sectionHeading(
                     title: "Popular Products",
-                    onPressed: () {},
+                    onPressed: () => Get.to(() => AllProducts()),
                   ),
                   const SizedBox(
                     height: MyAppSizes.spaceBtwSections / 2,
