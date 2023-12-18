@@ -3,6 +3,7 @@ import 'package:ecommerce/common/widgets/image_shape/circular_image.dart';
 import 'package:ecommerce/common/widgets/texts/brand_title_with_verfiedIcon.dart';
 import 'package:ecommerce/utils/constants/colors.dart';
 import 'package:ecommerce/utils/constants/enums.dart';
+import 'package:ecommerce/utils/constants/images_strings.dart';
 import 'package:ecommerce/utils/constants/sizes.dart';
 import 'package:ecommerce/utils/helpers/helper_function.dart';
 import 'package:flutter/material.dart';
@@ -11,8 +12,8 @@ class brandCard extends StatelessWidget {
   const brandCard(
       {super.key,
       this.showBorder = true,
-      required this.image,
-      required this.title,
+      this.image = MyAppImages.githubLightLogo,
+      this.title = "Nike",
       this.text = "256 Products",
       this.onTap,
       this.color = MyAppColors.primary});
