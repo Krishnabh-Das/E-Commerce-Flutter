@@ -1,10 +1,12 @@
 import 'package:ecommerce/common/widgets/image_text_widgets/vertical_image_text.dart';
 import 'package:ecommerce/common/widgets/texts/section_heading.dart';
+import 'package:ecommerce/features/shop/screens/sub_category/sub_category.dart';
 import 'package:ecommerce/utils/constants/colors.dart';
 import 'package:ecommerce/utils/constants/images_strings.dart';
 import 'package:ecommerce/utils/constants/sizes.dart';
 import 'package:ecommerce/utils/helpers/helper_function.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class homeCategories extends StatelessWidget {
   const homeCategories({
@@ -43,7 +45,7 @@ class homeCategories extends StatelessWidget {
                     backgroundColor:
                         dark ? MyAppColors.dark : MyAppColors.textWhite,
                     title: 'Shoes',
-                    onTap: () {},
+                    onTap: () => Get.to(() => SubCategoriesScreen()),
                   );
                 }),
           )

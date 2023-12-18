@@ -9,12 +9,14 @@ class circularIcon extends StatelessWidget {
       this.icon = Iconsax.heart5,
       this.radius = 40,
       required this.color,
-      this.backgroundColor});
+      this.backgroundColor,
+      this.iconSize});
 
   final IconData? icon;
   final double? radius;
   final Color color;
   final Color? backgroundColor;
+  final double? iconSize;
 
   @override
   Widget build(BuildContext context) {
@@ -32,6 +34,7 @@ class circularIcon extends StatelessWidget {
           icon: Icon(
             icon,
             color: color,
+            size: iconSize,
           )),
     );
   }
